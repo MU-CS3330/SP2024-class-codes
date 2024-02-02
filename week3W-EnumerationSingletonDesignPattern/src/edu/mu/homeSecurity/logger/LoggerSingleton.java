@@ -47,9 +47,13 @@ public class LoggerSingleton {
 	 */
 	public boolean logData(String message) {
 		try {
+			// BufferedWriter and FileWriter usage for writing into a file
+			// the "true" argument for the FileWriter is for allowing appending
 			BufferedWriter bw = new BufferedWriter(new FileWriter(logFilePath, true));
+			// using SimpleDateFormat and Date classes to generate timestamp information
 			String timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ").format(new Date());
 			bw.write(timestamp + message);
+			// do not forget to close your BufferWriter instance to avoid memory leaks
 			bw.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
