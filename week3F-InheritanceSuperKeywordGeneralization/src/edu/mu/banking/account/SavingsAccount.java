@@ -43,5 +43,22 @@ public class SavingsAccount extends Account {
 		}
 		return false;
 	}
+	
+	@Override
+	public boolean deposit(int amount) {
+		if(amount > 0) {
+			setBalance(getBalance() + amount);
+			addInterest();
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public String toString() {
+		return "SavingsAccount [interestRate=" + interestRate + ", accountNumber=" + accountNumber + ", balance=" + getBalance() +"]";
+	}
+	
+	
 
 }
