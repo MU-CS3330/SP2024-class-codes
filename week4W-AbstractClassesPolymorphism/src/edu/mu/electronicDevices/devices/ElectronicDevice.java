@@ -18,6 +18,11 @@ public abstract class ElectronicDevice {
 		this.status = status;
 	}
 	
+	/*
+	 * An abstract method does not have a body at where 
+	 * it is declared. But will forced to be implemented 
+	 * in child classes.
+	 */
 	public abstract boolean turnOn();
 	
 	public boolean turnOff() {
