@@ -21,5 +21,10 @@ public class CheckingAccount extends Account {
 		super(balance, accountNumber);
 		System.out.println("Checking account object created!");
 	}
+
+	@Override
+	public String toString() {
+		return "CheckingAccount [accountNumber=" + accountNumber + ", balance=" + getBalance() + "]";
+	}
 	
 }
