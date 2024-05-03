@@ -31,5 +31,14 @@ public class UserInformation {
 	public String toString() {
 		return "UserInformation [username=" + username + ", age=" + age + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		UserInformation userInfo = (UserInformation) obj;
+		if(this.getUsername().equals(userInfo.getUsername())) {
+			return true;
+		}
+		return false;
+	}
 
 }

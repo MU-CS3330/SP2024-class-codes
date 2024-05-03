@@ -52,4 +52,9 @@ public class UserListView extends JFrame {
 	public int getSelectedItemIndex() {
 		return list.getSelectedIndex();
 	}
+	
+	public int[] getMultipleSelectedItemIndex() {
+		return list.getSelectedIndices();
+	}
+	
 }
